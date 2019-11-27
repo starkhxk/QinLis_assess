@@ -37,35 +37,24 @@
             border: 0px;
         }
     </style>
-    <script type="text/javascript" src="Untitled-4.js">
-        function Isempty() {
-
-            if (document.getElementById("sex").checked) {
-                return true;
-            } else {
-                alert("请选择您的性别！");
-
-                return false;
-            }
-
-        }
+    <script type="text/javascript" src="002.js">
     </script>
 </head>
 
 <body>
     <div class="r">
-        <form action="" name="myform" onsubmit="return validateForm()&&Isempty()" method="POST" onsubmit="return Isempty()">
-            <input class="q" type="text" value="" name="StudentID" placeholder="学号">
+        <form action="" name="myform" onsubmit="return /*checked()&&*/validateForm()/*&&Esempty()*/" method="POST">
+            <input class="q" type="text" value="" name="StudentID" id="StudentID" placeholder="学号">
 
             <br>
 
             <br>
-            <input class="q " type="text " value="" name="IDnumber" placeholder="身份证号">
+            <input class="q " type="text " value="" name="IDnumber" id="IDnumber" placeholder="身份证号">
             <br><br>
-            <input class="q " type="text " value="" name="name" placeholder="姓名">
+            <input class="q " type="text " value="" name="name" id="name" placeholder="姓名">
             <br><br>
-            <input class="t" type="radio" value="" name="sex">男
-            <input class="t" type="radio" value="" name="sex">女
+            <input class="t" type="radio" value="" name="sex" id="sex">男
+            <input class="t" type="radio" value="" name="sex" id="sex">女
 
             <br><br>
 
