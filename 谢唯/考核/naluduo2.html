@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Qinli2</title>
+    <link rel="stylesheet" href="naluduo.css">
+
+</head>
+
+<body>
+    <div id="return">
+        <a href="naluduo.html">
+        返回</a></div>
+    <div ia="main">
+        <div id="form">
+            <form action="https://www.iconfont.cn/" method="POST" onsubmit=" return blank()&&checked()" id="f">
+                <div>
+                    <input type="text" placeholder="学号" id="xue" onblur="xuetest()">
+                </div>
+                <div>
+                    <input type="text" placeholder="身份证号" id="shenfen" onblur="cardtest()">
+                </div>
+                <div>
+                    <input type="text" placeholder="姓名" id="mingzi">
+                </div>
+                <div id="gender">
+                    性别：
+                    <label>
+            <input type="radio" name="gender" value="1" checked>男</label>
+                    <label>
+            <input type="radio" name="gender" value="2">女</label>
+                </div>
+                <input name="submit2" type="submit" value="提交信息" id="submit2">
+            </form>
+        </div>
+    </div>
+    <script>
+        var f = document.getElementById('f');
+        var xue = document.getElementById('xue');
+        var shenfen = document.getElementById('shenfen');
+        var mingzi = document.getElementById('mingzi');
+        //提交表单的事件监听
+        function blank() {
+            //判断是否存在内容
+            if (xue.value != '') {
+                if (shenfen.value != '') {
+                    if (mingzi.value != '') {
+                        return true;
+                    } else {
+                        alert('姓名内容为空，请填写姓名')
+                        return false;
+                    }
+                } else {
+                    alert('身份证号内容为空，请填写身份证号')
+                    return false;
+                }
+            } else {
+                alert('学号内容为空，请填写学号')
+                return false;
+            }
+        } //填写完毕才可以提交
+        var check = document.getElementById("check");
+        var arr = [{
+            "xue1": "1903030129",
+            "shenfen1": "211224200206019090",
+            "mingzi1": "谢唯"
+        }, {
+            "xue2": "1903030130",
+            "shenfen2": "211224200206019091",
+            "mingzi2": "赵贯群"
+        }]; //设置用户信息
+
+        function checked() {
+            if (xue.value == arr[0].xue1 && shenfen.value == arr[0].shenfen1 && mingzi.value == arr[0].mingzi1) {
+                alert("注册成功！");
+                return true;
+            } else {
+                if (xue.value == arr[1].xue2 && shenfen.value == arr[1].shenfen2 && mingzi.value == arr[1].mingzi2) {
+                    alert("注册成功！");
+                    return true;
+                } else {
+                    alert("无效信息！");
+                    return false;
+                }
+            }
+        } //判断json数组里是否有此用户
+        var id = /^[1-9][0-9]{5}(19|20)[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|31)|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}([0-9]|x|X)$/;
+
+        function cardtest() {
+            if (id.test(shenfen.value) === true) {
+
+            } else {
+                submit1.style.color = "  red";
+            }
+        } //验证身份证是否符合标准的正则表达式，但是没成功（苦笑）
+        var id1 = /^[0-2][0-9][0-1][0-2][0-1][0-6]{3}[0-4][0-9]$/;
+
+        function xuetest() {
+            if (id1.test(xue.value) === true) {
+
+            } else {
+                submit1.style.color = "red";
+            }
+        } //这是验证学号，在群里问过的专业代号和学院代号的最大数，也没好使
+    </script>
+</body>
+
+</html>
