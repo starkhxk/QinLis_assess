@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sccfirst</title>
+    <style type="text/css">
+        img {
+            position: relative;
+            height: 30%;
+            width: 50%;
+            margin: 20%25%0%;
+        }
+        
+        input {
+            color: rgb(245, 245, 245);
+            font-size: 180%;
+        }
+        
+        .div2 {
+            color: #F3A033;
+            margin: 15%5%0%;
+        }
+    </style>
+    <script type="text/javascript">
+        function disable() {
+            document.getElementById("accept").disabled = true
+        }
+
+        function enable() {
+            document.getElementById("accept").disabled = false
+        }
+    </script>
+</head>
+
+<body>
+    <img src="happy3.jpg">
+    <img src="happy2.jpg">
+    <center>
+        <div class="div2">
+            <input type="button" id="accept" disabled="true" value="登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录" onclick="location.href='Untitled-2.html'" style="border-radius:5px; width: 60%; height: 50px; background-color:#F3A033 ;">
+            <br />
+            <br />
+            <input type="checkBox" onclick="if (this.checked) {enable()} else {disable()}">已经阅读并同意服务协议
+        </div>
+    </center>
+</body>
+
+</html>
