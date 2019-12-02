@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sccsecond</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            color: #F3A033;
+            background-origin: padding-box;
+            margin: 0%1%0%1%;
+        }
+        
+        table {
+            margin: 0 auto;
+            margin-top: 0%;
+        }
+    </style>
+    <script type="text/javascript">
+        function check() {
+            var user_name = form1.name.value;
+            var user_mod = form1.mod.value;
+            var user_pwd = form1.pwd.value;
+            console.log(user_name);
+            console.log(user_mod);
+            console.log(user_pwd);
+            if ((user_name == "") || (user_name == null)) { //判断用户名是否为空，为空就弹出提示框"请输入用户名"，否则正常执行下面的代码。
+                alert("请输入姓名！");
+                form1.user_name.focus(); //获取焦点，即：鼠标自动定位到用户名输入框，等待用户输入用户名。
+                return;
+            } else {
+                if ((user_mod == "") || (user_mod == null)) { //判断手机号是否为空，为空就弹出提示框"请输入手机号"，否则正常执行下面的代码。
+                    alert("请输入手机号！");
+                    form1.user_mod.focus(); //获取焦点。
+                    return;
+                } else {
+                    if ((user_pwd == "") || (user_pwd == null)) { //判断身份证号是否为空，为空就弹出提示框"请输入身份证号"，否则正常执行下面的代码。
+                        alert("请输入身份证号！");
+                        form1.user_pwd.focus(); //获取焦点。
+                        return;
+                    }
+                }
+            }
+            if (user_name == "司春成" && user_mod == "18245594649" && user_pwd == "232325200007271618") {
+                window.open("http://ql.sylu.edu.cn/");
+            } else {
+                if (user_name == "司春城" && user_mod == "18245594649" && user_pwd == "232325200007271618") {
+                    window.open("http://ql.sylu.edu.cn/");
+                } else {
+                    if (user_name == "司春诚" && user_mod == "18245594649" && user_pwd == "232325200007271618") {
+                        window.open("http://ql.sylu.edu.cn/");
+                    } else {
+                        alert("信息输入错误！");
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="form1" method="POST" action="">
+        <!--这里用js实现跳转-->
+        <table cellpadding="90%" cellspacing="20%" border="0">
+            <tr>
+                <td height="50" colspan="2" bgcolor="#eeeeee" align="center">用户注册</td>
+            </tr>
+            <tr>
+                <td width="70" height="50">姓名：</td>
+                <td><input name="name" type="text" id="name" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td width="70" height="50">手机号：</td>
+                <td><input name="mod" type="text" id="mod" maxlength="11"></td>
+            </tr>
+            <tr>
+                <td width="80" height="50">身份证号：</td>
+                <td><input name="pwd" type="text" id="pwd" maxlength="18"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input name="reset" type="reset" value="重置">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input name="button" type="button" value="登录" onclick="check();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
