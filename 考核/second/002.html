@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
 
 <head>
     <style>
@@ -8,7 +8,7 @@
             border-color: orange;
         }
         
-        .t {
+        .sex {
             font-size: 1ex;
             border: none;
         }
@@ -29,7 +29,7 @@
             color: cornsilk;
         }
         
-        .r {
+        .from {
             top: 30%;
             left: 40%;
             margin-right: 5%;
@@ -37,29 +37,28 @@
             border: 0px;
         }
     </style>
+
     <script type="text/javascript" src="002.js">
     </script>
+
 </head>
 
 <body>
-    <div class="r">
-        <form action="" name="myform" onsubmit="return /*checked()&&*/validateForm()/*&&Esempty()*/" method="POST">
-            <input class="q" type="text" value="" name="StudentID" id="StudentID" placeholder="学号">
 
+    <div class="from">
+        <form action="" name="myform" onsubmit="return checked ()">
+            <input class="q " type="text" value="" name="xuehao" id="StudentID" maxlength="10" placeholder="学号">
             <br>
-
             <br>
-            <input class="q " type="text " value="" name="IDnumber" id="IDnumber" placeholder="身份证号">
+            <input class="q " type="text " value="" name="shenfen" id="IDnumber" maxlength="18" placeholder="身份证号">
             <br><br>
-            <input class="q " type="text " value="" name="name" id="name" placeholder="姓名">
+            <input class="q " type="text " value="" name="mingzi" id="name" placeholder="姓名">
             <br><br>
-            <input class="t" type="radio" value="" name="sex" id="sex">男
-            <input class="t" type="radio" value="" name="sex" id="sex">女
+            <input class="sex" type="radio" value="" name="radio" id="nan">男
+            <input class="sex" type="radio" value="" name="radio" id="nv">女
+            <br><br>
+            <button type="submit " class="w " id="btnSubmit">👉提交👈</button>
 
-            <br><br>
-
-            <button type="submit " class="w " id="btnSubmit">👉提交👈
-            <notton>
         </form>
     </div>
     <input class="e " type="button " value="👉返回👈 " onclick="javascript:history.go(-1) ">
