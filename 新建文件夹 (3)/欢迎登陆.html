@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新人注册</title>
+    <script>
+        function mybt01() {
+            var statue = document.getElementById("checkbox");
+            var phone = document.getElementById("phone").value;
+            if (phone == "") {
+                alert("手机号不能为空");
+                return false
+            }
+            if (statue.checked) {
+                location.href = "注册页面.html";
+            } else {
+                alert("同意服务协议未勾选");
+            }
+        }
+    </script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            width: 40%;
+        }
+        
+        h1 {
+            font-size: 400%;
+            text-align: center;
+            color: #F3A033;
+        }
+        
+        h2 {
+            font-size: 2em;
+            color: #F3A033;
+            text-align: center;
+        }
+        
+        .box {
+            text-align: center;
+            height: 80%;
+            padding: 5%;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            /* background: url(图片1.jpg);*/
+        }
+        
+        .form {
+            margin: 10% auto;
+        }
+        
+        input[type="text"] {
+            font-size: 100%;
+            border: 5px solid #F3A033;
+            background: none;
+            padding: 14px;
+            width: 80%;
+            border-radius: 30px;
+        }
+        /*input[type="submit"]*/
+        
+        button {
+            margin: 10% auto;
+            border: 5px solid #F3A033;
+            padding: 14px;
+            width: 80%;
+            border-radius: 30px;
+        }
+        
+        input[type="submit"]:hover {
+            background: yellowgreen;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="box">
+        <h1>The Young</h1>
+        <br>
+        <h2>欢迎登录</h2>
+        <img src="my logo.jpg" alt="这是一个图片">
+        <div class="form">
+
+            <input type="text" placeholder="请输入您的手机号" name="phone" id="phone" value=""><br>
+            <a href="#"><button onclick="mybt01()";type="button"name="" value="下一步">下一步</button></a>
+            <form>
+                <input class="check checkSty" type="checkbox" id="checkbox" name="checkbox" value="我已阅读并同意服务协议">我已阅读并同意服务协议
+            </form>
+
+        </div>
+
+
+    </div>
+
+</html>
