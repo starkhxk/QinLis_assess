@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="txstyle.css">
+    <script  type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script> 
+<script>
+      $(function  (){
+      //表单的提交事件
+        $("form").submit(function(){
+       var isok = true;
+       //校验每一个input
+       $(this).find("[reg]").each(function() {
+           //获得你输入的值
+          var val = $(this).val();
+           //获得这个input的reg属性
+           var reg = $(this).attr("reg");
+           //获得这个input的tip提示信息
+           var tip = $(this).attr("tip");
+           //验证
+           var regObj = new RegExp(reg);
+           if(!regObj.test(val)){
+               //把isok设置false
+               isok = false;
+               $(this).next("span").html(tip);
+               //跳出循环
+               return false;
+                }else{
+                 $(this).next("span").html("<img height='20' src='对号.jpg'>");
+           } 
+
+
+
+    }) 
+ 
+ 
+            return isok;
+ })
+
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+    </head>
+<body>
+
+
+    <div class="outdiv">
+        <form action="success.html" method="post">
+        <ul style="text-align: center;">
+            <li style="color:blue;font-size: 30px;">用户注册</li>
+            
+        </ul>
+    <ul>
+        <li>
+            <label>用户名:</label>
+            <input name="username" type="text" id="xm" reg="^\w{3,5}$" tip="请输入3到5位的字符"><span></span>
+        </li>
+      <li>
+            <label>密码:</label>
+            <input name="passward" type="password" reg="^\d{6,8}$" tip="请输入6到8位的数字"><span></span>
+      </li>
+
+        <li>
+            <label>姓名:</label>
+            <input name="usname" type="text"><span></span>
+        </li>
+        <li>
+            <label>学号:</label>
+            <input name="number" type="number" reg="^\d{10}$" tip="请输入您的10位学号"><span></span>
+        </li>
+        <li>
+            <label>身份证号:</label>
+            <input name="birth" type="birth" reg="^\d{18}$" tip="一定要输入您本人的身份证号哦"><span></span>
+        </li>
+    </ul>
+    <ul style="text-align: center;">
+     <li><input type="submit" value="提交信息"></li>
+    </ul>
+    </form>
+</div>
+</body>
+</html>
