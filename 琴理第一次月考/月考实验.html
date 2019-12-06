@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 300px;
+            margin: 50px auto;
+            /*background: #999;*/
+        }
+        
+        .tou {
+            font-weight: normal;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+        
+        .box-one {
+            width: 298px;
+            height: 50px;
+            /*background: #000;*/
+            margin-bottom: 20px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .box-one input {
+            width: 280px;
+            height: 50px;
+            position: absolute;
+            border: none;
+            left: 8px;
+            outline: none;
+            font-size: 16px;
+        }
+        
+        .box-text .box-password {
+            width: 300px;
+            text-align: left;
+            padding-bottom: 20px;
+        }
+        
+        .box-tj button {
+            width: 300px;
+            height: 45px;
+            border-radius: 5px;
+            border: none;
+            background: #4cd964;
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+    <!--<script type="text/javascript">
+        function checkname() {
+            var uname = document.getElementById("uname")
+        }
+    </script>-->
+
+</head>
+
+<body onload="createcode">
+    <div class="box">
+        <div class="tou">
+            设置昵称与密码
+        </div>
+        <form action="https://www.huya.com/l" method="post" action="" onsubmit="return abc">
+            <div class="box-one"><input type="text" name="uname" placeholder="昵称" onblur="checkuname">
+
+            </div>
+            <div class="box-one"><input type="password" placeholder="密码"></div>
+            <div class="box-one"><input type="password" placeholder="请再次确认你的密码"></div>
+            <div class="box-tj">
+                <button type="submit">
+                注册并登录
+            </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
