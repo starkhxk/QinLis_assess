@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>前端页面模板</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style type="text/css">
+	body{
+		background: #f3a033;
+		margin: 0;
+		padding: 0;
+	}
+	ul,li{
+		list-style: none;
+	}
+	.main{
+		width: 400px;
+		margin: 30px auto;
+		background: #fff;
+		padding: 20px;
+	}
+	.main input{
+		border-radius: 6px;
+		margin-bottom: 200px;
+		border: 1px solid #ddd;
+		padding: 10px;
+	}
+	.btn{
+	background: #08c;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    padding: 0 10px;
+    display: block;
+    margin-left: 106px;
+    width: 195px;
+	}
+	.check{
+		    padding-left: 101px;
+        font-size: 12px;
+	}
+	.title{
+		text-align: center;
+		font-size: 30px;
+		color: #f90
+	}
+</style>
+</head>
+
+<body>
+<div class="main">
+	<h1 class="title">出行宝</h1>
+	<ul>
+		<li>
+			手机号：<input type="text" class="text">
+		</li>
+		
+	</ul>
+	<input type="button" value="注册" class="btn" >
+	<div class="check"><input type="radio" id="check">已经阅读并同意服务协议</div>
+</div>
+	
+
+<script src="http://s3.lvjs.com.cn/min/index.php?f=js/new_v/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$('.btn').click(function(event) {
+		checkPhone()
+		if (!$("#check").is(':checked') ) {
+			alert('请勾选阅读并同意服务协议')
+		}else{
+			window.open('注册5.html')
+		};
+		
+	});
+	function checkPhone(){ 
+	    var phone = $('.text').val();
+	    if(!(/^1[3456789]\d{9}$/.test(phone))){ 
+	        alert("手机号码有误，请重填");  
+	        return false; 
+	    } 
+	}
+	
+
+</script>
+</body>
+</html>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>前端页面模板</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style type="text/css">
+
+	body{
+		background: #f3a033;
+		margin: 0;
+		padding: 0;
+	}
+	ul,li{
+		list-style: none;
+	}
+	.main{
+		width: 400px;
+		margin: 30px auto;
+		background: #fff;
+		padding: 20px;
+	}
+	.main input{
+		border-radius: 6px;
+		margin-bottom: 20px;
+		border: 1px solid #ddd;
+		padding: 10px;
+	}
+	.btn{
+	background: #08c;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    padding: 0 10px;
+    display: block;
+    margin-left: 106px;
+    width: 195px;
+	}
+	.check{
+		    padding-left: 101px;
+    font-size: 12px;
+	}
+	.title{
+		text-align: center;
+		font-size: 30px;
+		color: #f90
+	}
+</style>
+</head>
+
+<body>
+<form name="注册5" onsubmit="return checkreg()" action="" method="post">
+<div class="main">
+	<h1 class="title">出行宝</h1>
+	<ul>
+		<li>
+			　　学号：<input type="text" class="number">
+		</li>
+		<li>
+			身份证号：<input type="text" class="card">
+		</li>
+		<li>
+			　　姓名：<input type="text" class="name">
+		</li>
+		<li>
+			　　性别：<input type="radio" class="sex">男 <input type="radio" class="sex">女
+		</li>
+		
+	</ul>
+	<input type="button" value="提交信息" class="btn"  >
+	<a href="注册6.html">返回</a>
+
+</div>
+	
+
+
+<script src="http://s3.lvjs.com.cn/min/index.php?f=js/new_v/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$('.btn').click(function(event) {
+		var number = $('.number').val();
+		var card = $('.card').val();
+		var name = $('.name').val();
+		var sex = $('.sex').val();
+
+		var numberReg = /^(\d|[\u4e00-\u9fa5]){10}$/ 
+
+		var nameReg = /^[\u4E00-\u9FA5]{2,4}$/;
+		var cardReg = /^[A-Za-z0-9]{11}/
+
+		if (!numberReg.test(number)) {
+			alert('学号必须是数字，必须是10个字符')
+			return
+		}else if(!cardReg.test(card)){
+			alert('身份证号长度为11位字符')
+			return
+		}
+		else if(!nameReg.test(name)){
+			alert('姓名不能为空,且只能输中文')
+			return
+			
+		}
+		else if(sex == ''){
+			alert('性别不能为空')
+			return
+		}else{
+			alert('提交成功')
+		}
+		
+		
+	});
+</script>
+</body>
+</html>
+</html>
