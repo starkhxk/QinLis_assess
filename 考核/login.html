@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+    <style type="text/css">
+    .box{width:30%;height:40%;border:20px;margin:300px auto;max-width: 300px;position:bottom;}
+    .p{
+       font-size: 18px;
+       color:black}
+    .l{font-size: 3px;}
+    </style>
+    <script type="text/javascript">
+        function disable()
+          {
+          document.getElementById("accept").disabled=true
+          }
+        function enable()
+          {
+          document.getElementById("accept").disabled=false
+          }
+          </script>
+        
+</head>
+<body>
+        <div class="box">
+<script type="text/javascript">
+var user={
+    name:"企鹅",
+    pass:12121211}
+    "links":[{"name":"企鹅",
+    }]</script>
+    <form action="Untitled-2.html"method="get"target="_self">
+        <h1>企鸸电竞</h1>
+        <input type="text" placeholder="账户"  class="p" maxlength="12" size="30"/>
+        <br/><br/>
+        <input type="password" placeholder="密码" class="p" maxlength="12" size="30"/>
+        <br/><br/>
+        <input type="submit" value="登录" style="height:30px;width:250px;border:0;outline:noe;background-color:rgb(0, 68, 255);display:inline-block;"/>
+        <br/><br/>
+        <a class="l" style="text-align: right;" th:href="@{register}" href="register.html"><h1>还没有账户？前往注册</h1></a>
+        <br/>
+        男<input type="radio"name="six"/>
+        女<input type="radio"name="six"/>
+        <input type="checkbox" οnclick="if (this.checked) {enable()} else {disable()}"/>我已阅读且同意协议
+        <br/><br/>
+    </form> 
+        <script>
+        $(":submit").click(function()
+        {if($(":text").val()==""){
+            alert("请输入姓名")；
+            window.location.href="Untitled-2.html";
+        }
+        else
+        alert("登陆成功")；
+        })
+            </script>
+
+           </div>
+</body>
+</html>
