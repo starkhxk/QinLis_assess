@@ -1,0 +1,27 @@
+li{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+label{
+    display: inline-block;
+    width: 100px;
+}
+input{
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+}
+.outdiv{
+    border: 1px solid darkgray;
+    width: 800px;
+    height: 600px;
+    margin: 0px auto;
+    text-align: left;
+
+}
+ span{
+     color: red;
+     margin-left: 20px;
+
+}
