@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>新用户注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+</head>
+
+<body>
+
+    <h1 style="font-size: 1.5rem;color:#F3A033;position:fixed;left:35%;top:10%">欢迎新用户注册</h1>
+
+    <form name="form1" method="post">
+
+        <table width="22rem" height="13rem" border="0" align="center" style="position:absolute;top:12.5rem;left:35%">
+            <tr>
+
+
+                <td width="11rem" height="3.125rem"><input name="name" type="text" id="password" style="width: 12rem;height:2.1875rem" autofocus required="required" placeholder="学号">&nbsp;</td>
+
+            </tr><br>
+
+            <tr>
+
+                <td width="11rem" height="3.125rem"><input name="name" type="text" id="IDcard" style="width: 12rem;height:2.1875rem" autofocus required="required" placeholder="身份证号">&nbsp;</td>
+
+            </tr><br>
+            <tr>
+
+                <td width="11rem" height="3.125rem"><input name="name" type="text" id="usename" style="width:12rem;height:2.1875rem" autofocus required="required" placeholder="姓名">&nbsp;</td>
+
+            </tr><br>
+            <tr>
+
+                <td width="10.125rem" height="3.125rem"> 性别：
+                    <input name="sex" type="radio" value="0" checked="checked">男 <input name="sex" type="radio" value="1">女</td>
+
+            </tr><br>
+            <tr>
+                <td><input type="submit" value="注册" name="Submit" onclick="checkLogon()" id="stamp" style="height:1.875rem;width:12rem;background-color:#F3A033;display: inline-block;"> &nbsp;&nbsp;&nbsp;</td>
+            </tr><br>
+
+        </table>
+
+        <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回上一页" style="background: #F3A033;">
+
+</body>
+<script>
+    function checkLogon() {
+        var json = [{
+            "IDcard": "1",
+            "password": "1",
+            "usename": "冯婉晴"
+        }, {
+            "IDcard": "2",
+            "password": "2",
+            "usename": "肖战"
+        }]
+        var IDcard = document.getElementById("IDcard").value;
+        var password = document.getElementById("password").value;
+        var username = document.getElementById("usename").value;
+
+        var bool = false;
+        for (var i = 0; i < json.length; i++) {
+            if ((json[i].IDcard == IDcard) && (json[i].password == password) && (json[i].usename == username)) {
+                bool = true;
+                break;
+            }
+        }
+
+        if (bool == true) {
+            alert("登录成功");
+        } else {
+            if (IDcard == "" || password == "" || username == "") {
+                alert("不能为空");
+            } else {
+                alert("您输入的信息有错误！！！");
+            }
+        }
+    }
+</script>
+
+</html>
