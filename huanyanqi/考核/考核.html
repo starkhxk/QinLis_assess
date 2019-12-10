@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page1</title>
+    <script>
+        function dianji() {
+            var x = document.getElementById("dianji1").checked;
+            if (x) {
+                window.open('考核二页面.html')
+            } else {
+                alert("请同意用户协定!")
+            }
+        }
+    </script>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        
+        img {
+            width: 500px;
+            height: 250px;
+        }
+        
+        .a1 {
+            color: #f3a033;
+            float: right;
+            position: relative;
+        }
+        
+        .a1:hover {
+            color: blue;
+        }
+        
+        .logo {
+            padding-top: 80px;
+        }
+        
+        h1 {
+            color: #f3a033;
+            font-size: 80px;
+        }
+        
+        h2 {
+            color: #f3a033;
+            font-size: 40px;
+        }
+        
+        label {
+            color: #f3a033;
+        }
+        
+        button {
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: #f3a033;
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="a1" href="#"> 语言</a>
+    <div class="logo">
+        <img src="C:\Users\dell\Desktop\html\考核图片.png" alt="大学">
+        <h1>
+            大学网
+        </h1>
+    </div>
+    <h2>
+        大学生就用大学网！
+    </h2>
+    <form name="myForm">
+        <label>手机号:</label><input type="text" onfocus="if(value=='请输入手机号') {value=''}" onblur="if (value=='') {value='请输入手机号'}" name="phonenummber" required /><br /><br />
+        <button id="button" onclick="dianji()">注册</button><br /><br /><br /><br />
+        <input type="radio" id="dianji1" value="" /> <label>“已经阅读并同意服务协议”</label>
+
+    </form>
+</body>
+
+</html>

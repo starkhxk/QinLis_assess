@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <script type="text/javascript">
+        function disable()
+          {
+          document.getElementById("accept").disabled=true
+          }
+        function enable()
+          {
+          document.getElementById("accept").disabled=false
+          }
+        </script>
+        <style>
+        a:link{color: #2395ff}
+        a:visited{color: #2395ff;}
+        .a{
+          height: 60px;
+          background-color: #F3A033;
+        }
+        .b{
+          border-radius: 3px;
+          background-color: #F3A033;
+          border: transparent;
+          width: 250px;
+          height: 40px;
+          color: white;
+          font-size: 15px;
+        }
+        .c{
+          width: 250px;
+          height: 35px;
+          font-size: 15px;
+          border-radius: 3px;
+          border: transparent;
+          border: 1px solid #F3A033;
+        }
+        .d{
+          font-size: 15px;
+          color: #999;
+        }
+        body{
+          margin: 0px;
+          background: white;}
+        </style>
+</head>
+<body>
+    <center>
+    <div class="a"></div>
+    <p><input type="text" class="c" placeholder="手机号"></p>
+    <p><a href="考核2.html"><input type="button" id="accept" disabled="true" value="下一步" class="b" onclick="alert(请勾选“已经阅读并同意服务协议”！)"></a></p>
+    <p><input type="checkBox" onclick="if (this.checked) {enable()} else {disable()}"><span class="d">已经阅读并同意<a href="">《用户服务协议》</a></span></p>
+      <span></span>
+  </center>
+</body>
+</html>

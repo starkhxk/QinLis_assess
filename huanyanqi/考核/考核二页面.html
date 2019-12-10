@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page2</title>
+</head>
+<script>
+    function dianji() {
+        var xinxi = {
+            "person": [{
+                "name": "王二",
+                "studentId": "19000000",
+                "id": "123456789"
+            }, {
+                "name": "张三",
+                "studentId": "19000001",
+                "id": "123456788"
+            }, {
+                "name": "李四",
+                "studentId": "19000002",
+                "id": "123456787"
+            }, ]
+        }
+
+        var Name = document.getElementById("name").value;
+        var StudentId = document.getElementById("studentId").value;
+        var Id = document.getElementById("id").value;
+        for (var i = 0; i < xinxi.person.length; i++) {
+            if (xinxi.person[i].name == Name && xinxi.person[i].studentId == StudentId && xinxi.person[i].id == Id) {
+                window.open('target.html')
+                return;
+            }
+        }
+        alert("没有此用户")
+    }
+</script>
+
+<body>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        div {
+            padding-top: 100px;
+        }
+        
+        div label {
+            color: #f3a033;
+        }
+        
+        button {
+            border-radius: 10px;
+            width: 100px;
+            height: 50px;
+            background-color: #f3a033;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
+        h1 {
+            font-size: 50px;
+            color: #f3a033;
+        }
+    </style>
+    <div>
+        <h1>
+            注册:
+        </h1>
+        <form>
+            <label>学校名称：</label>
+            <select name="school">
+            <option value="dbdx">东北大学</option>
+            <option value="sylgdx" selected="selected">沈阳理工大学</option>
+            <option value="sygydx">沈阳工业大学</option>
+            <option value="synydx">沈阳农业大学</option>
+            <option value="syjzdx">沈阳建筑大学</option>
+            <option value="sydx">沈阳大学</option>
+        </select><br/><br/>
+            <label>姓名：</label>
+            <input id="name" type="text" name="name" value="" required /><br/><br/><label>学号：</label>
+            <input id="studentId" type="text" name="student ID" value="" required /><br/><br/><label>身份证：</label>
+            <input id="id" type="text" name="ID number" value="" required/><br/><br/> <label>性别：</label>
+            <input type="radio" name="gender" value="male" /><label>男</label>
+            <input type="radio" name="gender" value="female" /><label>女</label><br/><br/>
+            <button onclick="dianji()">提交信息</button>
+            <button type="reset">重置信息</button>
+
+        </form>
+        <form action="考核.html"><button>返回上一页</button></form>
+    </div>
+</body>
+
+</html>
