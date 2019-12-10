@@ -6,6 +6,7 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <style type="text/css">
+
 	body{
 		background: #f3a033;
 		margin: 0;
@@ -22,7 +23,7 @@
 	}
 	.main input{
 		border-radius: 6px;
-		margin-bottom: 200px;
+		margin-bottom: 20px;
 		border: 1px solid #ddd;
 		padding: 10px;
 	}
@@ -38,7 +39,7 @@
 	}
 	.check{
 		    padding-left: 101px;
-        font-size: 12px;
+    font-size: 12px;
 	}
 	.title{
 		text-align: center;
@@ -86,15 +87,6 @@
 </body>
 </html>
 </html>
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
